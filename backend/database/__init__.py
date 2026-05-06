@@ -1,1 +1,1 @@
-# Database module
+# Database file for models

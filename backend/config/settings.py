@@ -1,6 +1,5 @@
 """
-Configuration settings for Ragora AI
-Uses environment variables with fallback defaults
+Configuration settings for Ragora AI with Groq support
 """
 
 from pydantic_settings import BaseSettings
@@ -22,9 +21,9 @@ class Settings(BaseSettings):
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
 
-    # OpenAI
-    OPENAI_API_KEY: str = ""
-    OPENAI_MODEL: str = "gpt-3.5-turbo"
+    # Groq API (replacing OpenAI)
+    GROQ_API_KEY: str = ""
+    GROQ_MODEL: str = "mixtral-8x7b-32768"  # Fast and powerful open model
 
     # Server
     HOST: str = "0.0.0.0"
